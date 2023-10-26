@@ -160,21 +160,7 @@ button:hover{
     min-width: 89px;
 }
 
-/* .box{
-    height: 150px;
-    width: 150px;
-    background-color: black;
-    text-align: center;
-    border-radius: 10px;
-    color: var(--yellow);
-    font-family: 'Finger Paint', cursive;
-    font-size: 100px;
-    cursor: pointer;
-    margin: 5px;
-} */
-
 .box:hover{
-    /* background-color: rgb(227, 220, 234); */
     color: rgb(90, 87, 87)
 }
 
@@ -238,6 +224,10 @@ button:hover{
         flex-direction: row;
         justify-content: space-between;
         width: 100%;
+    }
+
+    .mutePencilBtn{
+        padding: 10px 30px;
     }
 
     .turn{
