@@ -6,10 +6,10 @@
 
 :root{
     --x-color: black; 
-    --yellow: rgb(215, 190, 26);
+    --yellow: rgb(90, 206, 221);
     --x-hover-color: rgb(90, 87, 87);
-    --o-hover-color: rgb(235, 218, 151);
-    --winning-blocks: blueviolet;
+    --o-hover-color: rgb(179, 234, 238);
+    --winning-blocks: rgb(197, 220, 207);
 }
 
 body{
@@ -132,7 +132,7 @@ button:hover{
 }
 
 #playerText{
-    color: rgb(215, 190, 26);
+    color: var(--yellow);
     text-transform: uppercase;
 }
 
@@ -246,5 +246,6 @@ button:hover{
 
     h1{
         font-size: 1.8rem;
+        text-align: center;
     }
 }
