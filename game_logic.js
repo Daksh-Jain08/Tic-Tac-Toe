@@ -1,6 +1,6 @@
 let playerText = document.getElementById('playerText')
-let restartBtn = document.getElementById('restartBtn')
-let mutePencilBtn = document.getElementById('mutePencilBtn')
+let restartBtn = document.getElementsByClassName('restartBtn')
+let mutePencilBtn = document.getElementsByClassName('mutePencilBtn')
 let resetScoreBtn = document.getElementById('resetScore')
 let boxes = Array.from(document.getElementsByClassName('box'))
 let X_audioFile = "X_audio.mp3"
@@ -126,7 +126,8 @@ function isDraw() {
     }
 }
 
-restartBtn.addEventListener('click', restart)
+restartBtn[0].addEventListener('click', restart)
+restartBtn[1].addEventListener('click', restart)
 
 function restart() {
     spaces.fill(null)
@@ -142,7 +143,8 @@ function restart() {
     document.querySelector(".turn").getElementsByClassName("imgbox")[0].style.width = "0"
 }
 
-mutePencilBtn.addEventListener('click', mutePencil)
+mutePencilBtn[0].addEventListener('click', mutePencil)
+mutePencilBtn[1].addEventListener('click', mutePencil)
 
 function mutePencil() {
     X_audioFile = X_audioFile == "X_audio.mp3" ? "" : "X_audio.mp3"
@@ -150,7 +152,8 @@ function mutePencil() {
     win_audioFile = win_audioFile == "win_audio.mp3" ? "" : "win_audio.mp3"
 
     let soundStatus = document.querySelector(".buttons").getElementsByClassName("btn")[1].innerText
-    document.querySelector(".buttons").getElementsByClassName("btn")[1].innerText = soundStatus == "Mute" ? "Unmute" : "Mute"
+    document.getElementsByClassName("mutePencilBtn")[0].innerText = soundStatus == "Mute" ? "Unmute" : "Mute"
+    document.getElementsByClassName("mutePencilBtn")[1].innerText = soundStatus == "Mute" ? "Unmute" : "Mute"
 }
 
 resetScoreBtn.addEventListener('click', resetScore)
