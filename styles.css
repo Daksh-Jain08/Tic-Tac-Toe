@@ -14,6 +14,7 @@
 
 body{
     font-family: 'Finger Paint', cursive;
+    height: 100vh
 }
 
 .navbar{
@@ -31,7 +32,6 @@ body{
     align-items: center;
     justify-content: center;
     padding-top: 50px;
-    height: 84vh;
     min-height: 546px;
 }
 
@@ -47,12 +47,18 @@ body{
     width: 90%;
 }
 
-.turn, .score-main{
+.turn, .score-main, .turn-btn{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 25%;
+    min-width: 320px;
+}
+
+.turn-btn button{
+    width: 0;
+    display: none;
 }
 
 .score{
@@ -76,6 +82,7 @@ body{
 
 .draw-score{
     margin-top: 20px;
+    padding: 5px 20px;
 }
 
 .resetScoreDiv{
@@ -89,7 +96,6 @@ body{
     margin-right: 0;
     min-width: 150px;
 }
-
 
 .imgbox{
     display: flex;
@@ -132,23 +138,26 @@ button:hover{
 
 #gameboard{
     margin: 3rem auto;
-    width: 450px;
-    height: 450px;
+    width: 33vw;
+    height: 30vw;
     display: flex;
     flex-wrap: wrap;
-    transition: width 1s ease-in;
+    min-height: 270px;
+    min-width: 297px;
 }
 
 .box{
-    height: 150px;
-    width: 150px;
+    height: 10vw;
+    width: 10vw;
     border-right: solid var(--yellow) 2px;
     border-bottom: solid var(--yellow) 2px;
     text-align: center;
     color: var(--yellow);
     font-family: 'Finger Paint', cursive;
-    font-size: 100px;
+    font-size: 5rem;
     cursor: pointer;
+    min-height: 89px;
+    min-width: 89px;
 }
 
 /* .box{
@@ -175,4 +184,77 @@ button:hover{
 
 .box:nth-child(6) ~ .box{
     border-bottom: none;
+}
+
+@media (max-width: 1300px) and (min-width: 1100px) {
+    .score{
+        flex-direction: column;
+    }
+
+    .x-score, .o-score, .draw-score, .resetScoreDiv{
+        margin-bottom: 20px;
+        margin-right: 20px;
+        margin-top: 0;
+    }
+
+    .turn, .score-main{
+        min-width: 120px;
+    }
+
+    .hero{
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .hero{
+        flex-direction: column;
+    }
+
+    .draw-score{
+        margin-top: 0;
+    }
+
+    .turn, .score-main, .turn-btn{
+        width: 100%;
+    }
+
+    #playerText, .btn{
+        font-size: 1rem;
+    }
+
+    .box{
+        font-size: 4.5rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .turn-btn button{
+        width: 50%;
+        display: flex;
+    }
+
+    .turn-btn{
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .turn{
+        min-width: 100px;
+    }
+
+    .buttons button{
+        width: 0;
+        display: none;
+    }
+
+    .imgbox img{
+        width: 0;
+        display: none;
+    }
+
+    h1{
+        font-size: 1.8rem;
+    }
 }
