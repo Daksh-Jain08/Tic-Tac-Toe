@@ -7,7 +7,7 @@
 :root{
     --x-color: black; 
     --blue: rgb(90, 206, 221);
-    --x-hover-color: rgb(195, 191, 191);
+    --x-hover-color: rgb(201, 200, 202);
     --o-hover-color: rgb(198, 238, 241);
     --winning-blocks: rgb(197, 220, 207);
 }
