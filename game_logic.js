@@ -38,7 +38,7 @@ function boxClicked(e){
         }
         else{
             currentPlayer = X_Text
-            e.target.style.color = "var(--yellow)"
+            e.target.style.color = "var(--blue)"
             O_audio.play()
         }
         if(!(isDraw())){

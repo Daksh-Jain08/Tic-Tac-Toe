@@ -6,9 +6,9 @@
 
 :root{
     --x-color: black; 
-    --yellow: rgb(90, 206, 221);
-    --x-hover-color: rgb(90, 87, 87);
-    --o-hover-color: rgb(179, 234, 238);
+    --blue: rgb(90, 206, 221);
+    --x-hover-color: rgb(195, 191, 191);
+    --o-hover-color: rgb(198, 238, 241);
     --winning-blocks: rgb(197, 220, 207);
 }
 
@@ -18,7 +18,7 @@ body{
 }
 
 .navbar{
-    background-color: black;
+    background-color: var(--blue);
     color: white;
     display: flex;
     font-size: 1rem;
@@ -68,7 +68,7 @@ body{
 }
 
 .x-score{
-    background-color: var(--yellow);
+    background-color: var(--blue);
     border-radius: 10px;
     padding: 5px 20px;
     margin-right: 20px;
@@ -112,7 +112,7 @@ body{
 
 .btn{
     margin-top: 15px;
-    background-color: var(--yellow);
+    background-color: var(--blue);
     padding: 10px 20px;
     width: 50%;
     border: none;
@@ -132,7 +132,7 @@ button:hover{
 }
 
 #playerText{
-    color: var(--yellow);
+    color: var(--blue);
     text-transform: uppercase;
 }
 
@@ -149,10 +149,10 @@ button:hover{
 .box{
     height: 10vw;
     width: 10vw;
-    border-right: solid var(--yellow) 2px;
-    border-bottom: solid var(--yellow) 2px;
+    border-right: solid var(--blue) 2px;
+    border-bottom: solid var(--blue) 2px;
     text-align: center;
-    color: var(--yellow);
+    color: var(--blue);
     font-family: 'Finger Paint', cursive;
     font-size: 5rem;
     cursor: pointer;
